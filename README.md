@@ -1,3 +1,3 @@
 # Materia: Seminario de Integracion
 
-## AlumnO: Martin Borja
+## Alumno: Martin Borja
