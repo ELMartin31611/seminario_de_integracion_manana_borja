@@ -1,6 +1,27 @@
 // src/App.tsx
 
 import WelcomeBanner       from './components/WelcomeBanner'
+import UserGreeting        from './components/UserGreeting'
+import CurrentDateDisplay  from './components/CurrentDateDisplay'
+import ColoredBox          from './components/ColoredBox'
+import ConditionalGreeting from './components/ConditionalGreeting'
+import FruitList           from './components/FruitList'
+import PriceTag            from './components/PriceTag'
+import StatusBadge         from './components/StatusBadge'
+import MiniProfileCard     from './components/MiniProfileCard'
+import SimpleInfoTable     from './components/SimpleInfoTable'
+import ProductCard         from './components/ProductCard'
+import ProductCatalogList  from './components/ProductCatalogList'
+import UserProfileCard     from './components/UserProfileCard'
+import DigitalCounter from './01useState/DigitalCounter'
+import SafeCounter from './01useState/SafeCounter'
+import UserProfileForm from './01useState/UserProfileForm'
+import TaskManager from './01useState/TaskManager'
+import DocumentTitle from './02useEffect/DocumentTitle'
+import FetchUser from './02useEffect/FetchUser'
+import FetchUsers from './02useEffect/FetchUsers'
+import AutoFocusForm from './03useRef/AutoFocusForm'
+import InlineEditor from './03useRef/InlineEditor'
 
 // ┌──────────────────────────────────────────────────────────────────────────┐
 // │  Cambia PASO y guarda (Ctrl+S) para navegar entre componentes.          │
@@ -18,7 +39,7 @@ import WelcomeBanner       from './components/WelcomeBanner'
 // │  12  ProductCatalogList  — lista con renderizado condicional de items   │
 // │  13  UserProfileCard     — ejercicio: props complejas + rol             │
 // └──────────────────────────────────────────────────────────────────────────┘
-const PASO = 1
+const PASO = 31
 
 const fruits = [
   { name: 'Manzana', emoji: '🍎', calories: 52 },
@@ -35,7 +56,7 @@ const catalog = [
 
 export default function App() {
   const content =
-    PASO ===  1 ? <WelcomeBanner /> :/*
+    PASO ===  1 ? <WelcomeBanner /> :
     PASO ===  2 ? <UserGreeting name="Ana García" occupation="Desarrolladora Frontend" /> :
     PASO ===  3 ? <CurrentDateDisplay /> :
     PASO ===  4 ? (
@@ -91,8 +112,21 @@ export default function App() {
         skills={['TypeScript', 'React', 'Node.js']}
         bio="Desarrolladora fullstack con 5 años de experiencia."
       />
-    ) :*/
-     
+    ) :
+    // usestate
+    PASO === 20 ? <DigitalCounter /> :
+    PASO === 21 ? <SafeCounter /> :
+    PASO === 22 ? <UserProfileForm /> :
+    PASO === 23 ? <TaskManager /> :
+    // useeffect
+    PASO === 31 ? <DocumentTitle /> :
+    PASO === 31 ? <FetchUser /> :
+    PASO === 32 ? <FetchUsers /> :  
+    // useRef
+    PASO === 40 ? <AutoFocusForm /> :
+    PASO === 41 ? <InlineEditor /> :
+
+
     <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>
 
   return (
