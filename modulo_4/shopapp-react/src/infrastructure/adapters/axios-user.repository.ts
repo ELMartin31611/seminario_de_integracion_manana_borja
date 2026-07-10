@@ -6,9 +6,7 @@ import type { UserProfile } from '@/domain/entities/user-profile.entity'
 import type { UserStats } from '@/domain/entities/user-stats.entity'
 
 export class AxiosUserRepository implements UserRepository {
-  getStats(): Promise<UserStats> {
-    throw new Error('Method not implemented.')
-  }
+  
   async getProfile(): Promise<UserProfile> {
     try {
       const { data } = await apiClient.get<UserProfile>('/users/profile/')
@@ -39,5 +37,4 @@ export class AxiosUserRepository implements UserRepository {
     throw parseApiError(err)
   }
 }
-
 }

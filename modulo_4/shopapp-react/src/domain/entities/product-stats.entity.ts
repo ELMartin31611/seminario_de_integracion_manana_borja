@@ -1,6 +1,7 @@
 // src/domain/entities/product-stats.entity.ts
 
 export interface ProductStats {
+  total: number
   total_active: number
   avg_price: number | null
   max_price: number | null
