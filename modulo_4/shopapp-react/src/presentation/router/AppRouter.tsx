@@ -4,7 +4,8 @@ import { Suspense, lazy, useEffect } from 'react'
 import { useAuthStore } from '@/presentation/store/auth.store'
 import ProtectedRoute from './ProtectedRoute'
 import AppShell from '@/presentation/components/AppShell'
-import PlaceholderPage from '../pages/PlaceholderPage'
+
+import AdminOrderDetailPage from '../pages/admin/AdminOrderDetailPage'
 
 // ─── Lazy imports ─────────────────────────────────────────────────────────────
 
@@ -22,7 +23,8 @@ const AdminDashboardPage = lazy(() => import('../pages/admin/AdminDashboardPage'
 const AdminCategoriesPage = lazy(() => import('../pages/admin/AdminCategoriesPage'))
 const AdminProductsPage = lazy(() => import('../pages/admin/AdminProductsPage'))
 const AdminOrdersPage = lazy(() => import('../pages/admin/AdminOrdersPage'))
-const AdminOrderDetailPage = lazy(() => import('../pages/admin/AdminOrderDetailPage'))
+const AdminUsersPage = lazy(() => import('../pages/admin/AdminUsersPage'))
+
 
 
 
@@ -155,7 +157,7 @@ export default function AppRouter() {
               path="/admin/users"
               element={
                 <ProtectedRoute requireStaff>
-                  <PlaceholderPage title="Admin Usuarios — Módulo 13" />
+                  <AdminUsersPage />
                 </ProtectedRoute>
               }
             />
