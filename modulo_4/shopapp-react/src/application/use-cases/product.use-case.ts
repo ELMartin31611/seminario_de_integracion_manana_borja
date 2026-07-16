@@ -35,4 +35,8 @@ restockProduct(id: number, quantity: number): Promise<{ id: number; name: string
   return this.productRepository.restockProduct(id, quantity)
 }
 
+uploadImage(id: number, file: File): Promise<Product> {
+  return this.productRepository.uploadImage(id, file)
+}
+
 }
