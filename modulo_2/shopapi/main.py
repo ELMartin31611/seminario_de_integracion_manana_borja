@@ -1,5 +1,5 @@
 def main():
-    print("Hello from modulo-2!")
+    print("Hello from shopapi!")
 
 
 if __name__ == "__main__":

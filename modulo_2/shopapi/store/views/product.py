@@ -87,4 +87,3 @@ class ProductViewSet(viewsets.ModelViewSet):
         if data['avg_price']:
             data['avg_price'] = round(float(data['avg_price']), 2)
         return Response(data)
-    

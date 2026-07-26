@@ -24,7 +24,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
     ordering_fields    = ['name', 'created_at']
     ordering           = ['name']
 
-
     @action(detail=True, methods=['get'], url_path='products')
     def active_products(self, request, pk=None):
         from store.models import Product
